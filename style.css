@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+body {}
+
 /*navigation starts here. . .*/
 
 .nav-container {
@@ -12,6 +14,8 @@
     justify-content: space-around;
     align-items: center;
     height: 7vh;
+
+
 }
 
 
@@ -27,6 +31,7 @@
 
 .nav-div {
     width: 40%;
+
 }
 
 .style-nav {
@@ -35,6 +40,7 @@
     list-style: none;
     display: flex;
     justify-content: center;
+
 
 }
 
@@ -45,6 +51,7 @@
     padding: 10px;
     margin: 0 10px;
     color: #111;
+
 }
 
 .style-nav li a:hover {
@@ -253,7 +260,7 @@ p {
     font-variant: small-caps;
     color: red;
     text-align: center;
-    font-size: 3rem;
+    font-size: 2rem;
     margin-bottom: 20px;
     margin-top: 20px;
 
@@ -262,7 +269,7 @@ p {
 .quality {
     text-align: center;
     font-variant: small-caps;
-    font-size: 1.4rem;
+    font-size: 1rem;
     color: #ddd;
     word-wrap: wrap;
 }
@@ -284,6 +291,7 @@ span {
 
 /*setting the media */
 @media screen and (max-width:700px) {
+
     body {
         overflow-x: hidden;
     }
@@ -304,7 +312,11 @@ span {
     .nav-div {
         order: 1;
         width: auto;
+        display: none;
+    }
 
+    .display {
+        display: block;
     }
 
     .nav-container {
@@ -320,15 +332,13 @@ span {
     }
 
     .nav-list {
-        z-index: 1000;
+        z-index: 1;
         position: absolute;
         right: 0;
         height: 93vh;
         top: 7vh;
         background-color: rgba(33, 33, 33, 0.5);
         width: 30%;
-
-
 
         display: flex;
         flex-direction: column;
@@ -351,6 +361,8 @@ span {
         transition: transform 0.2s ease-in;
 
 
+
+
     }
 
     .nav-list li a {
@@ -360,6 +372,7 @@ span {
         color: #ddd;
         font-weight: 700;
         letter-spacing: 2px;
+
     }
 
     .nav-list li a:hover {
@@ -370,6 +383,7 @@ span {
     /*new here...*/
     .list-active {
         transform: translateX(0%);
+        overflow-x: hidden;
 
     }
 

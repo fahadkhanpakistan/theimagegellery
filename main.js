@@ -2,8 +2,11 @@ const navSlide = () => {
     const burger = document.querySelector('.burger');
     const list = document.querySelector('.nav-list');
     const listLinks = document.querySelectorAll('.nav-list li');
+    const navDiv = document.querySelector('.nav-div');
+
     burger.addEventListener('click', () => {
         list.classList.toggle('list-active');
+        navDiv.classList.toggle('display');
         listLinks.forEach((link, index) => {
             if (link.style.animation) {
                 link.style.animation = "";
